@@ -1,6 +1,6 @@
 # pontential-crud
 
-link da API (GET): http://devs.epizy.com/developers/
+http://devs.epizy.com/developers/
 
 ## Listar todos os desenvolvedores
 
