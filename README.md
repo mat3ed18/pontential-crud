@@ -1,7 +1,5 @@
 # pontential-crud
 
-http://devs.epizy.com/developers/
-
 ## Listar todos os desenvolvedores
 
 ```
