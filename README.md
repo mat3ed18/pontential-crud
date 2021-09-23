@@ -50,11 +50,48 @@ http://devs.epizy.com/developers/
 }
 ```
 
-## Buscar um desenvolvedor pelo nome ou hobbie
-
 ## Listar um desenvolvedor específico
 
+```
+http://devs.epizy.com/developers/?id={{ID}}
+```
+
+### Parâmetros
+
+- `{{ID}}`: código (id) do desenvolvedor
+
+### Resultado
+
+```json
+{
+    "dev": {
+        "nome": "Joelson",
+        "sexo": "M",
+        "idade": "18",
+        "hobby": "Escrever histórias em quadrinhos",
+        "data_nascimento": "2003-05-20"
+    },
+    "response": 200
+}
+```
+
+## Buscar um desenvolvedor pelo nome ou hobbie
+
 ## Cadastrar um novo desenvolvedor
+
+```
+http://devs.epizy.com/developers/?cadastro=true&nome={{NOME}}&sexo={{SEXO}}&idade={{IDADE}}&hobby={{HOBBY}}&data_nascimento={{DATA_NASCIMENTO}}
+```
+
+### Parâmetros
+
+- `cadastro`: true (padrão)
+- `{{NOME}}`: nome
+- `{{SEXO}}`: gênero (M para masculino e F para feminino)
+- `{{IDADE}}`: idade (Ex.: 15)
+- `{{HOBBY}}`: hobbie
+- `{{DATA_NASCIMENTO}}`: data de nascimento (AAAA-MM-DD Ex.: 2002-04-15)
+
 
 ## Atualizar dados de um desenvolvedor
 
