@@ -62,20 +62,35 @@ http://devs.epizy.com/developers/?id={{ID}}
 
 ### Resultado
 
-```json
+```
 {
     "dev": {
-        "nome": "Joelson",
-        "sexo": "M",
-        "idade": "18",
-        "hobby": "Escrever histórias em quadrinhos",
-        "data_nascimento": "2003-05-20"
+        ... // dados do desenvolvedor
     },
     "response": 200
 }
 ```
 
 ## Buscar um desenvolvedor pelo nome ou hobbie
+
+```
+http://devs.epizy.com/developers/?q={{TEXT}}
+```
+
+### Parâmetros
+
+- `{{TEXT}}`: texto de busca
+
+### Resultado
+
+```
+{
+    "devs": [
+        ... // lista de desenvolvedores (JSON)
+    ],
+    "response": 200
+}
+```
 
 ## Cadastrar um novo desenvolvedor
 
@@ -85,14 +100,63 @@ http://devs.epizy.com/developers/?cadastro=true&nome={{NOME}}&sexo={{SEXO}}&idad
 
 ### Parâmetros
 
-- `cadastro`: true (padrão)
 - `{{NOME}}`: nome
 - `{{SEXO}}`: gênero (M para masculino e F para feminino)
 - `{{IDADE}}`: idade (Ex.: 15)
 - `{{HOBBY}}`: hobbie
 - `{{DATA_NASCIMENTO}}`: data de nascimento (AAAA-MM-DD Ex.: 2002-04-15)
+- `cadastro`: true
 
+### Resultado
+
+```json
+{
+    "message": "O desenvolvedor foi cadastrado com sucesso",
+    "response": 200
+}
+```
 
 ## Atualizar dados de um desenvolvedor
 
+```
+http://devs.epizy.com/developers/?editar=true&id={{ID}}&nome={{NOME}}&sexo={{SEXO}}&idade={{IDADE}}&hobby={{HOBBY}}&data_nascimento={{DATA_NASCIMENTO}}
+```
+
+### Parâmetros
+
+- `{{ID}}`: id do desenvolvedor
+- `{{NOME}}`: nome
+- `{{SEXO}}`: gênero (M para masculino e F para feminino)
+- `{{IDADE}}`: idade (Ex.: 15)
+- `{{HOBBY}}`: hobbie
+- `{{DATA_NASCIMENTO}}`: data de nascimento (AAAA-MM-DD Ex.: 2003-06-12)
+- `editar`: true
+
+### Resultado
+
+```json
+{
+    "message": "O desenvolvedor foi atualizado com sucesso",
+    "response": 200
+}
+```
+
 ## Apagar um desenvolvedor
+
+```
+http://devs.epizy.com/developers/?exclusao=true&id={{ID}}
+```
+
+### Parâmetros
+
+- `{{ID}}`: id do desenvolvedor
+- `exclusao`: true
+
+### Resultado
+
+```json
+{
+    "message": "O desenvolvedor foi excluído com sucesso",
+    "response": 200
+}
+```
